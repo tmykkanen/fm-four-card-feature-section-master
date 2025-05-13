@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format(truetype);
+}
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("/fonts/Poppins/Poppins-Bold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("/fonts/Poppins/Poppins-Light.ttf") format(truetype);
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-poppins-light: "PoppinsLight", sans-serif;
+  --font-poppins-bold: "PoppinsBold", sans-serif;
+
+  --color-fm-red: hsl(0, 78%, 62%);
+  --color-fm-cyan: hsl(180, 62%, 55%);
+  --color-fm-orange: hsl(34, 97%, 64%);
+  --color-fm-blue: hsl(212, 86%, 64%);
+
+  --color-fm-white: hsl(0, 0%, 100%);
+  --color-fm-grey-400: hsl(212, 6%, 44%);
+  --color-fm-grey-500: hsl(234, 12%, 34%);
+}
+
+@layer components {
+  .card {
+    @apply mb-8 flex flex-col rounded-sm border-t-4 p-8 shadow-lg;
+
+    & > h2 {
+      @apply text-2xl;
+    }
+
+    & > p {
+      @apply text-sm;
+    }
+
+    & > img {
+      @apply mt-8 self-end;
+    }
+  }
+}

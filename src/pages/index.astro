@@ -1,16 +1,75 @@
 ---
 import "@styles/global.css";
+import { Image } from "astro:assets";
+import iconCalculator from "@images/icon-calculator.svg";
+import iconKarma from "@images/icon-karma.svg";
+import iconSupervisor from "@images/icon-supervisor.svg";
+import iconTeam from "@images/icon-team-builder.svg";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Frontend Mentor | Four card feature section</title>
   </head>
-  <body>
-    <h1 class="text-5xl text-green-300">Astro</h1>
+  <body class="font-poppins text-fm-grey-500 mx-auto max-w-[314px] text-[15px]">
+    <section class="my-15">
+      <h1 class="mb-4 flex flex-col text-2xl">
+        <span class="font-poppins-light">Reliable, efficient delivery</span>
+        <span class="font-poppins-bold">Powered by Technology</span>
+      </h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </section>
+
+    <section class="border-t-fm-cyan card">
+      <h2>Supervisor</h2>
+      <p>Monitors activity to identify project roadblocks</p>
+      <Image
+        src={iconSupervisor}
+        alt={"icon of a magnifying glass for supervisor"}
+      />
+    </section>
+
+    <section class="border-t-fm-red card">
+      <h2>Team Builder</h2>
+      <p>
+        Scans our talent network to create the optimal team for your project
+      </p>
+      <Image src={iconTeam} alt={"icon of a house for team builder"} />
+    </section>
+
+    <section class="border-t-fm-orange card">
+      <h2>Karma</h2>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <Image src={iconKarma} alt={"icon of a lightbulb for karma"} />
+    </section>
+
+    <section class="border-t-fm-blue card">
+      <h2>Calculator</h2>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <Image
+        src={iconCalculator}
+        alt={"icon of a computer screen for calculator"}
+      />
+    </section>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
   </body>
 </html>
+
+<style>
+  /* @reference '@styles/global.css'; */
+</style>
