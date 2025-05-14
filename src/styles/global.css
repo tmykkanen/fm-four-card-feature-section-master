@@ -29,6 +29,30 @@
 }
 
 @layer components {
+  .base-layout {
+    --max-width: 314px;
+    --padding: 16px;
+
+    display: grid;
+    grid-template-columns:
+      minmax(var(--padding), 1fr)
+      min(var(--max-width), 100% - var(--padding) * 2)
+      minmax(var(--padding), 1fr);
+
+    & > * {
+      grid-column: 2/3;
+    }
+
+    @container (width >= 48rem) {
+      display: grid;
+      column-gap: 32px;
+      justify-content: center;
+
+      grid-template-columns: repeat(3, minmax(0, 350px));
+      grid-template-rows: repeat(6, minmax(0, 1fr));
+    }
+  }
+
   .card {
     @apply mb-8 flex flex-col rounded-sm border-t-4 p-8 shadow-lg;
 

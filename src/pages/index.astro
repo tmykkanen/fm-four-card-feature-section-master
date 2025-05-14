@@ -15,58 +15,69 @@ import iconTeam from "@images/icon-team-builder.svg";
     <meta name="generator" content={Astro.generator} />
     <title>Frontend Mentor | Four card feature section</title>
   </head>
-  <body class="font-poppins text-fm-grey-500 mx-auto max-w-[314px] text-[15px]">
-    <section class="my-15">
-      <h1 class="mb-4 flex flex-col text-2xl">
-        <span class="font-poppins-light">Reliable, efficient delivery</span>
-        <span class="font-poppins-bold">Powered by Technology</span>
-      </h1>
-      <p>
-        Our Artificial Intelligence powered tools use millions of project data
-        points to ensure that your project is successful
-      </p>
-    </section>
+  <body class="font-poppins text-fm-grey-500 @container text-[15px]">
+    <main class="base-layout">
+      <section
+        class="my-15 flex flex-col items-center @3xl:col-span-3 @3xl:row-span-2"
+      >
+        <h1 class="mb-4 flex flex-col text-center text-2xl">
+          <span class="font-poppins-light">Reliable, efficient delivery</span>
+          <span class="font-poppins-bold">Powered by Technology</span>
+        </h1>
+        <p class="max-w-[54ch] text-center">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </section>
 
-    <section class="border-t-fm-cyan card">
-      <h2>Supervisor</h2>
-      <p>Monitors activity to identify project roadblocks</p>
-      <Image
-        src={iconSupervisor}
-        alt={"icon of a magnifying glass for supervisor"}
-      />
-    </section>
+      <section
+        class="border-t-fm-cyan card @3xl:col-start-1 @3xl:col-end-2 @3xl:row-start-4 @3xl:row-end-6"
+      >
+        <h2>Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+        <Image
+          src={iconSupervisor}
+          alt={"icon of a magnifying glass for supervisor"}
+        />
+      </section>
 
-    <section class="border-t-fm-red card">
-      <h2>Team Builder</h2>
-      <p>
-        Scans our talent network to create the optimal team for your project
-      </p>
-      <Image src={iconTeam} alt={"icon of a house for team builder"} />
-    </section>
+      <section
+        class="border-t-fm-red card @3xl:col-start-2 @3xl:row-start-3 @3xl:row-end-5"
+      >
+        <h2>Team Builder</h2>
+        <p>
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <Image src={iconTeam} alt={"icon of a house for team builder"} />
+      </section>
 
-    <section class="border-t-fm-orange card">
-      <h2>Karma</h2>
-      <p>Regularly evaluates our talent to ensure quality</p>
-      <Image src={iconKarma} alt={"icon of a lightbulb for karma"} />
-    </section>
+      <section
+        class="border-t-fm-orange card @3xl:col-start-2 @3xl:row-start-5 @3xl:row-end-7"
+      >
+        <h2>Karma</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <Image src={iconKarma} alt={"icon of a lightbulb for karma"} />
+      </section>
 
-    <section class="border-t-fm-blue card">
-      <h2>Calculator</h2>
-      <p>Uses data from past projects to provide better delivery estimates</p>
-      <Image
-        src={iconCalculator}
-        alt={"icon of a computer screen for calculator"}
-      />
-    </section>
-
-    <footer>
+      <section
+        class="border-t-fm-blue card @3xl:col-start-3 @3xl:row-start-4 @3xl:row-end-6"
+      >
+        <h2>Calculator</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <Image
+          src={iconCalculator}
+          alt={"icon of a computer screen for calculator"}
+        />
+      </section>
+    </main>
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
 </html>
 
