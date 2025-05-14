@@ -17,9 +17,7 @@ import iconTeam from "@images/icon-team-builder.svg";
   </head>
   <body class="font-poppins text-fm-grey-500 @container text-[15px]">
     <main class="base-layout">
-      <section
-        class="my-15 flex flex-col items-center @3xl:col-span-5 @3xl:col-start-2 @3xl:row-span-2"
-      >
+      <section class="card-header my-15 flex flex-col items-center">
         <h1 class="mb-4 flex flex-col text-center text-2xl">
           <span class="font-poppins-light">Reliable, efficient delivery</span>
           <span class="font-poppins-bold">Powered by Technology</span>
@@ -30,9 +28,7 @@ import iconTeam from "@images/icon-team-builder.svg";
         </p>
       </section>
 
-      <section
-        class="border-t-fm-cyan card @3xl:col-span-1 @3xl:col-start-2 @3xl:col-end-3 @3xl:row-start-4 @3xl:row-end-6"
-      >
+      <section class="border-t-fm-cyan card card-supervisor">
         <h2>Supervisor</h2>
         <p>Monitors activity to identify project roadblocks</p>
         <Image
@@ -41,9 +37,7 @@ import iconTeam from "@images/icon-team-builder.svg";
         />
       </section>
 
-      <section
-        class="border-t-fm-red card @3xl:col-span-1 @3xl:col-start-4 @3xl:row-start-3 @3xl:row-end-5"
-      >
+      <section class="border-t-fm-red card card-team">
         <h2>Team Builder</h2>
         <p>
           Scans our talent network to create the optimal team for your project
@@ -51,17 +45,13 @@ import iconTeam from "@images/icon-team-builder.svg";
         <Image src={iconTeam} alt={"icon of a house for team builder"} />
       </section>
 
-      <section
-        class="border-t-fm-orange card @3xl:col-span-1 @3xl:col-start-4 @3xl:row-start-5 @3xl:row-end-7"
-      >
+      <section class="border-t-fm-orange card card-karma">
         <h2>Karma</h2>
         <p>Regularly evaluates our talent to ensure quality</p>
         <Image src={iconKarma} alt={"icon of a lightbulb for karma"} />
       </section>
 
-      <section
-        class="border-t-fm-blue card @3xl:col-span-1 @3xl:col-start-6 @3xl:row-start-4 @3xl:row-end-6"
-      >
+      <section class="border-t-fm-blue card card-calculator">
         <h2>Calculator</h2>
         <p>Uses data from past projects to provide better delivery estimates</p>
         <Image
@@ -72,3 +62,8 @@ import iconTeam from "@images/icon-team-builder.svg";
     </main>
   </body>
 </html>
+
+<style>
+  @container (width >= 56rem) {
+  }
+</style>
